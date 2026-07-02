@@ -1,12 +1,6 @@
-# Ewalkers — site
+# Ewalkers
 
 Landing page one-page pour la marque Ewalkers (lunettes SGQ01).
-
-## Démo en ligne
-
-Après déploiement GitHub Pages :
-
-**https://pmaeter.github.io/site/**
 
 ## Développement local
 
@@ -15,13 +9,11 @@ npm install
 npm run dev
 ```
 
-Puis ouvrir http://localhost:3000/site/
+Puis ouvrir http://localhost:3000
 
 ## Déploiement
 
-Le déploiement est automatique via GitHub Actions à chaque push sur `main`.
-
-Dans GitHub : **Settings → Pages → Source** doit être sur **GitHub Actions**.
+Hébergement prévu sur **Vercel** (connecter ce dépôt GitHub).
 
 ## Structure
 
