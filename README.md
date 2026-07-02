@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ewalkers — Landing page SGQ01
 
-## Getting Started
+Site one-page premium pour les lunettes de sport connectées Ewalkers (réf. EW_SGQ01).
 
-First, run the development server:
+## Stack technique
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Technologie | Rôle |
+|---|---|
+| **Next.js 16** (App Router) | Framework React, SSG/SSR, déploiement Vercel en un clic |
+| **Tailwind CSS v4** | Design system rapide, responsive mobile-first |
+| **GSAP + ScrollTrigger** | Animations scroll (fade-in, parallax léger) |
+| **TypeScript** | Typage et maintenabilité |
+
+**Pourquoi ce choix :** Next.js offre un excellent rapport rapidité/performance pour une landing statique, avec optimisation d'images native (`next/image`), SEO et hébergement trivial sur Vercel. Tailwind accélère la mise en page premium sans CSS custom lourd. GSAP reste la référence pour des animations scroll fluides type Meta AI Glasses, plus légère que Framer Motion pour du parallax pur.
+
+## Structure
+
+```
+site/
+├── public/images/
+│   ├── logo-ewalkers.png
+│   ├── product/          # Visuels produit (hero, angles)
+│   ├── lifestyle/        # Mises en situation outdoor
+│   └── gallery/          # Galerie photos
+├── src/
+│   ├── app/
+│   │   ├── page.tsx              # Accueil (placeholder)
+│   │   ├── design/page.tsx       # Preview des 3 directions artistiques
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   ├── components/
+│   │   ├── design/               # Composants preview direction
+│   │   ├── layout/               # Header, Footer (à venir)
+│   │   └── sections/             # Hero, Specs, FAQ… (à venir)
+│   └── lib/
+│       └── design-tokens.ts      # 3 palettes + typographies
+└── assets crea/                  # Fichiers source (PDF, originaux)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lancer le projet
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd site
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Accueil : http://localhost:3000
+- Direction artistique : http://localhost:3000/design
 
-## Learn More
+## Contenu produit (EW_SGQ01)
 
-To learn more about Next.js, take a look at the following resources:
+Source : `assets crea/Fiche sport glasses Ewalkers SGQ01.pdf`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Bluetooth 5.3 + Wi-Fi 5 GHz
+- Mémoire 4 Go · Caméra Sony IMX 219 8 MP
+- Batterie 270 mAh · 9 h musique · 50 min photo/vidéo
+- Double micro + haut-parleurs stéréo Φ13
+- EIS · IA ChatGPT · 52 g · 158,5 × 61 × 165,5 mm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Prochaine étape
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Valider une direction artistique (A, B ou C) avant développement des sections complètes.
