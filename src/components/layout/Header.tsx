@@ -46,15 +46,25 @@ export function Header() {
           className="hidden items-center gap-8 lg:flex"
           aria-label="Navigation principale"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-white/55 transition-colors hover:text-white"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith("#") ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-white/55 transition-colors hover:text-white"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-white/55 transition-colors hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="hidden lg:block">
@@ -97,16 +107,27 @@ export function Header() {
       {menuOpen && (
         <div className="fixed inset-0 z-0 bg-[#050505]/95 backdrop-blur-xl lg:hidden">
           <nav className="flex h-full flex-col items-center justify-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-[family-name:var(--font-syne)] text-2xl text-white"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="font-[family-name:var(--font-syne)] text-2xl text-white"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-[family-name:var(--font-syne)] text-2xl text-white"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
             <Button href="#contact" variant="primary" className="mt-4">
               Acheter
             </Button>

@@ -31,6 +31,15 @@ export function Button({
 
   if (href) {
     const isExternal = href.startsWith("http");
+    const isHash = href.startsWith("#");
+
+    if (isHash) {
+      return (
+        <a href={href} className={classes}>
+          {children}
+        </a>
+      );
+    }
 
     return (
       <Link

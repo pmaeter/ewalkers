@@ -60,9 +60,27 @@ export function FaqSection() {
                       )}
                     >
                       <div className="overflow-hidden">
-                        <p className="px-6 pb-6 leading-relaxed text-white/50">
+                        <p
+                          className={cn(
+                            "px-6 leading-relaxed text-white/50",
+                            "link" in item && item.link ? "pb-3" : "pb-6",
+                          )}
+                        >
                           {item.answer}
                         </p>
+                        {"link" in item && item.link ? (
+                          <div className="px-6 pb-6">
+                            <a
+                              href={item.link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 text-sm font-medium text-[#00AEEF] transition-colors hover:text-white"
+                            >
+                              {item.link.label}
+                              <span aria-hidden>↗</span>
+                            </a>
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </div>

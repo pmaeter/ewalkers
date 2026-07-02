@@ -262,6 +262,15 @@ export const faqItems = [
     answer:
       "Lunettes SGQ01, étui de transport, chiffon de nettoyage, câble USB, support nasal silicone et supports d'oreille silicone.",
   },
+  {
+    question: "Où trouver le manuel utilisateur ?",
+    answer:
+      "Le manuel complet EW_SGQ01 (installation, utilisation, entretien et fonctionnalités) est disponible au format PDF.",
+    link: {
+      label: "Télécharger le manuel EW_SGQ01 (PDF)",
+      href: "/documents/ew-sgq01-manual.pdf",
+    },
+  },
 ];
 
 export const retailer = {
