@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { navLinks, retailer } from "@/lib/content";
+import { navLinks } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
@@ -58,7 +58,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href={retailer.url} variant="primary">
+          <Button href="#contact" variant="primary">
             Acheter
           </Button>
         </div>
@@ -107,7 +107,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button href={retailer.url} variant="primary" className="mt-4">
+            <Button href="#contact" variant="primary" className="mt-4">
               Acheter
             </Button>
           </nav>

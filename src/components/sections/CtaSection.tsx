@@ -59,14 +59,11 @@ export function CtaSection() {
           </h2>
           <p className="mx-auto mt-8 max-w-xl text-xl leading-relaxed text-white/50">
             Découvrez les Ewalkers SGQ01 en vente exclusive chez Electro
-            Dépôt — ou contactez-nous pour en savoir plus.
+            Dépôt.
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <Button href={retailer.url} variant="primary">
               Acheter
-            </Button>
-            <Button href="mailto:contact@ewalkers.com" variant="secondary">
-              Nous contacter
             </Button>
           </div>
 
@@ -80,13 +77,15 @@ export function CtaSection() {
             <p className="text-sm uppercase tracking-[0.2em] text-white/45">
               {retailer.tagline}
             </p>
-            <Image
-              src={retailer.logo}
-              alt="Electro Dépôt"
-              width={220}
-              height={48}
-              className="h-10 w-auto md:h-12"
-            />
+            <span className="inline-flex rounded-xl bg-white px-5 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
+              <Image
+                src={retailer.logo}
+                alt="Electro Dépôt"
+                width={220}
+                height={48}
+                className="h-8 w-auto md:h-10"
+              />
+            </span>
           </Link>
         </RevealOnScroll>
       </div>
