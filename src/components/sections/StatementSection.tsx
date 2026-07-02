@@ -54,11 +54,11 @@ export function StatementSection() {
             src={statement.image}
             alt=""
             fill
-            className="object-cover object-center"
+            className={statement.imagePosition}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-[#050505]/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/30 via-transparent to-[#050505]/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/55 to-transparent md:via-[#050505]/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/20 via-transparent to-[#050505]/40 md:from-[#050505]/30 md:to-[#050505]/60" />
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 pt-32 md:pb-24">
             <div className="space-y-2 md:space-y-4">

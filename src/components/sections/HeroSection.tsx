@@ -90,11 +90,11 @@ export function HeroSection() {
           alt="Cycliste portant les lunettes connectées Ewalkers SGQ01 au coucher du soleil"
           fill
           priority
-          className="object-cover object-[62%_38%] sm:object-[58%_center]"
+          className="object-cover object-[78%_28%] sm:object-[65%_35%] md:object-[58%_center]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-l from-[#050505]/75 via-[#050505]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-[#050505]/50 via-[#050505]/10 to-transparent sm:from-[#050505]/75 sm:via-[#050505]/20" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl items-end justify-end px-6 pb-14 pt-40 sm:pb-20 lg:pb-24">

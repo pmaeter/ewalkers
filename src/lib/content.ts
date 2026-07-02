@@ -20,12 +20,14 @@ export const statements = [
     line2: "Robustes.",
     line3: "Connectées.",
     image: "/images/texte/robuste.png",
+    imagePosition: "object-cover object-[88%_28%] sm:object-[78%_32%] md:object-center",
   },
   {
     line1: "Capturez.",
     line2: "Écoutez.",
     line3: "Demandez.",
     image: "/images/texte/capturez.png",
+    imagePosition: "object-cover object-[62%_22%] sm:object-center md:object-center",
   },
 ];
 
