@@ -13,9 +13,10 @@ Puis ouvrir http://localhost:3000
 
 ## Déploiement
 
-Hébergement prévu sur **Vercel** (connecter ce dépôt GitHub).
+Hébergement sur **Vercel** (connecté au dépôt GitHub `pmaeter/ewalkers`).
 
 ## Structure
 
-- `public/` — images et assets statiques
 - `src/` — application Next.js (App Router)
+- `public/` — images et assets statiques
+- `assets crea/` — fichiers source locaux (logo, photos, PDF fiche produit)
