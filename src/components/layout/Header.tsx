@@ -29,9 +29,11 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled
-          ? "border-b border-white/5 bg-[#050505]/80 py-3 backdrop-blur-xl"
-          : "bg-transparent py-6",
+        menuOpen
+          ? cn("bg-transparent", scrolled ? "py-3" : "py-6")
+          : scrolled
+            ? "border-b border-white/5 bg-[#050505]/80 py-3 backdrop-blur-xl"
+            : "bg-transparent py-6",
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
