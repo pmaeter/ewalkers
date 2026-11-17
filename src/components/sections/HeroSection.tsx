@@ -84,13 +84,16 @@ export function HeroSection() {
       ref={sectionRef}
       className="relative flex min-h-[100svh] items-end overflow-hidden bg-[#050505]"
     >
-      <div ref={bgRef} className="absolute inset-0 will-change-transform">
+      <div
+        ref={bgRef}
+        className="absolute inset-x-0 top-0 h-[68svh] will-change-transform sm:inset-0 sm:h-auto"
+      >
         <Image
           src="/images/lifestyle-new/hero-1.png"
           alt="Cycliste portant les lunettes connectées Ewalkers SGQ01 au coucher du soleil"
           fill
           priority
-          className="object-cover object-[78%_28%] sm:object-[65%_35%] md:object-[58%_center]"
+          className="object-cover object-[43%_25%] sm:object-[65%_35%] md:object-[58%_center]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/30 to-transparent" />
